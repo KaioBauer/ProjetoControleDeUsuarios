@@ -56,7 +56,7 @@ class ProfileController extends Controller
             $user->photo = $path;
         }
 
-        $user->Auth::save(); // Salvar as alterações
+        $user->save(); // Salvar as alterações no banco de dados
 
         return redirect()->route('profile')->with('success', 'Perfil atualizado com sucesso!');
     }

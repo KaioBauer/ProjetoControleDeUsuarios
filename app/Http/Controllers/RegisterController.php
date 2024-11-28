@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
-
 class RegisterController extends Controller
 {
     // Mostrar formulário de registro
@@ -16,7 +15,7 @@ class RegisterController extends Controller
     }
 
     // Lógica de registro de usuário
-    public function register(Request $request)
+    public function register(Request $request) // Nome corrigido aqui
     {
         // Validação básica dos dados de entrada
         $request->validate([
