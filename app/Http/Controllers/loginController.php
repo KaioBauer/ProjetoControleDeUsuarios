@@ -27,7 +27,7 @@ class loginController extends Controller
         // Tentar autenticar o usuário
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             // Autenticação bem-sucedida, redirecionar
-            return redirect()->route('profile')->with('success', 'Login realizado com sucesso!');
+            return redirect()->route('profiles')->with('success', 'Login realizado com sucesso!');
         }
 
         return back()->withErrors(['email' => 'As credenciais estão incorretas']);
