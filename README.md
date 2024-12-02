@@ -1,4 +1,4 @@
-# Sistema de Cadastro e Login de Usuários
+# Sistema de Cadastro e Login de Usuários desenvolvido por Kaio Guilherme Bauer e Yran Mauro
 
 Este é um sistema simples de cadastro e login de usuários com autenticação básica, desenvolvido em **Laravel**. A aplicação permite que os usuários se registrem, façam login e editem seus perfis.
 
