@@ -6,6 +6,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
 
 
+
 Route::get('/', function () {
     return redirect()->route('login');
 });

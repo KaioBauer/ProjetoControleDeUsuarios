@@ -3,35 +3,69 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background-color: #f7f9fc;
-    color: #333;
+    background-color: #e5eefc; /* Fundo cinza claro */
+    color: #6d91da; /* Cor do texto principal */
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start; /* Ajustando para começar do topo */
     align-items: center;
     height: 100vh;
-    box-sizing: border-box; /* Garante que o padding e a borda sejam contados dentro do tamanho total */
+    box-sizing: border-box;
+    padding-top: 70px; /* Espaço acima para não sobrepor a navbar */
+}
+
+/* Navbar Fixa no Topo */
+.navbar {
+    position: fixed; /* Torna a navbar fixa no topo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Garante que a navbar fique acima de outros elementos */
+    background-color: #4267b2; /* Azul do Facebook */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para a navbar */
+    padding: 10px 15px; /* Ajustando o padding para a navbar */
+    height: 60px; /* Define a altura da navbar */
+    display: flex;
+    justify-content: space-between; /* Espaçamento entre os itens na navbar */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+}
+
+.navbar-brand, .nav-link {
+    color: #4c69e9 !important; /* Cor dos links na navbar */
+    font-weight: bold;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1); /* Ícone do menu hamburguer branco */
 }
 
 /* Container Principal */
 .container {
-    max-width: 800px;
-    margin: 50px auto;
+    max-width: 600px; /* Definindo largura máxima menor para o container */
+    width: 100%; /* O container ocupa toda a largura disponível */
+    margin: 100px auto 20px auto; /* Espaço para que o conteúdo não fique sobreposto à navbar */
     padding: 20px 30px;
-    background-color: #fff;
+    background-color: #ffffff; /* Fundo branco para o container */
     border-radius: 10px;
+    border: 2px groove #c3c3eb; /* Borda cinza clara */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo do formulário */
 }
 
 /* Títulos */
 h1, h2 {
-    color: #1877f2;
+    color: #1d2129; /* Cor do texto */
     font-weight: bold;
     text-align: center;
     margin-bottom: 1.5rem;
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 36px; /* Reduzindo o tamanho do título */
+    border-bottom: 2px solid #4267b2; /* Linha azul abaixo do título */
+    padding-bottom: 10px;
 }
 
 h2 {
@@ -42,13 +76,15 @@ h2 {
 form {
     display: flex;
     flex-direction: column;
+    width: 100%; /* Altera a largura do formulário */
     gap: 15px;
+    align-items: center; /* Centraliza os elementos do formulário */
 }
 
 label {
     font-weight: bold;
     font-size: 14px;
-    color: #555;
+    color: #1d2129;
     margin-bottom: 5px;
 }
 
@@ -57,7 +93,7 @@ input[type="password"],
 input[type="text"],
 textarea,
 input[type="file"] {
-    width: 90%;
+    width: 90%; /* O input ocupa 90% da largura do formulário */
     padding: 12px;
     font-size: 16px;
     border: 1px solid #dddfe2;
@@ -68,7 +104,7 @@ input[type="file"] {
 
 input:focus,
 textarea:focus {
-    border-color: #1877f2;
+    border-color: #4267b2; /* Azul para a borda em foco */
     outline: none;
     background-color: #fff;
 }
@@ -82,29 +118,29 @@ textarea {
 button,
 .btn {
     padding: 12px;
-    font-size: 14px; /* Tamanho da fonte ajustado */
+    font-size: 14px;
     border: none;
     border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    box-sizing: border-box; /* Ajuste no box-sizing */
-    display: inline-block; /* Garante que o botão seja um bloco de nível inline */
-    width: auto; /* Impede que o botão ocupe toda a largura */
-    margin: 10px auto; /* Centraliza o botão */
-    text-align: center; /* Garante o texto centralizado */
+    box-sizing: border-box;
+    display: inline-block;
+    width: auto;
+    margin: 10px auto;
+    text-align: center;
 }
 
 button {
-    background-color: #1877f2;
+    background-color: #4267b2; /* Azul para o botão */
     color: white;
 }
 
 button:hover {
-    background-color: #165eab;
+    background-color: #365899;
 }
 
 button:focus {
-    outline: 2px solid #165eab;
+    outline: 2px solid #365899;
     outline-offset: 2px;
 }
 
@@ -113,12 +149,12 @@ button:focus {
 }
 
 .btn-info {
-    background-color: #1877f2;
+    background-color: #4267b2; /* Azul para o botão */
     color: #fff;
 }
 
 .btn-info:hover {
-    background-color: #165eab;
+    background-color: #365899;
 }
 
 /* Alertas */
@@ -143,7 +179,7 @@ button:focus {
 
 /* Tabelas */
 .table {
-    width: 90%;
+    width: 100%; /* Altera a largura da tabela */
     border-collapse: collapse;
     margin-top: 20px;
 }
@@ -166,7 +202,7 @@ button:focus {
 }
 
 .table tbody td {
-    padding: 12px 45px;
+    padding: 12px 15px;
     color: #555;
 }
 
@@ -205,17 +241,3 @@ button:focus {
     color: #333;
 }
 
-/* Imagem de Perfil */
-.img-fluid {
-    margin-top: 20px;
-    border: 2px solid #dddfe2;
-    padding: 5px;
-    border-radius: 50%;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.img-fluid:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
-}
