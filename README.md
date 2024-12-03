@@ -73,25 +73,24 @@ Este é um sistema simples de cadastro e login de usuários com autenticação b
 
     ```bash
     php artisan serve
+
     ```
 
-7. **Acesse a aplicação**:
+7. **Link com as fotos de perfil**:
+   Fazer o link com as fotos de perfils que ficam salvas na aplicação éimpportante para que elas aparesão na tela.
+
+    ```bash
+    php artisan storage:link
+    ```
+
+8. **Acesse a aplicação**:
    Abra o navegador e vá para `http://127.0.0.1:8000` para acessar o sistema.
-
-## Estrutura de Pastas
-
--   **`app/Http/Controllers/Auth`**: Controladores de autenticação (Login, Registro, Logout).
--   **`resources/views`**: Views Blade para as páginas de login, registro e perfil.
--   **`routes/web.php`**: Definição das rotas principais do sistema, incluindo autenticação.
 
 ## Rotas
 
--   `/login`: Exibe o formulário de login.
--   `/login`: Envia os dados do formulário de login.
--   `/register`: Exibe o formulário de registro de novos usuários.
--   `/register`: Envia os dados do formulário de registro.
--   `/logout`: Realiza o logout do usuário autenticado.
--   `/profile`: Exibe o formulário para edição do perfil do usuário.
--   `/profile`: Atualiza os dados do perfil do usuário.
+-   `/login`: Exibe o formulário de login, envia os dados do formulário de login.
+-   `/register`: Exibe o formulário de registro de novos usuários, envia os dados do formulário de registro.
+-   `/profile`: Exibe o formulário para edição do perfil do usuário, atualiza os dados do perfil do usuário.
+-   `/profiles`: Exibe todos perfis criados.
 
 Esse README fornece uma visão geral da aplicação, além de instruções claras para instalação e contribuição. Se necessário, ajuste conforme a estrutura ou requisitos específicos do seu projeto.
