@@ -1,4 +1,4 @@
-# Sistema de Cadastro e Login de Usuários desenvolvido por Kaio Guilherme Bauer e Yran Mauro
+ # Sistema de Cadastro e Login de Usuários desenvolvido por Kaio Guilherme Bauer e Yran Mauro
 
 Este é um sistema simples de cadastro e login de usuários com autenticação básica, desenvolvido em **Laravel**. A aplicação permite que os usuários se registrem, façam login e editem seus perfis.
 
@@ -77,7 +77,7 @@ Este é um sistema simples de cadastro e login de usuários com autenticação b
     ```
 
 7. **Link com as fotos de perfil**:
-   Fazer o link com as fotos de perfils que ficam salvas na aplicação éimpportante para que elas aparesão na tela.
+   Fazer o link com as fotos de perfils que ficam salvas na aplicação é impportante para que elas apareçam na tela.
 
     ```bash
     php artisan storage:link
@@ -92,5 +92,3 @@ Este é um sistema simples de cadastro e login de usuários com autenticação b
 -   `/register`: Exibe o formulário de registro de novos usuários, envia os dados do formulário de registro.
 -   `/profile`: Exibe o formulário para edição do perfil do usuário, atualiza os dados do perfil do usuário.
 -   `/profiles`: Exibe todos perfis criados.
-
-Esse README fornece uma visão geral da aplicação, além de instruções claras para instalação e contribuição. Se necessário, ajuste conforme a estrutura ou requisitos específicos do seu projeto.
